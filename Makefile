@@ -12,4 +12,13 @@ auth:
 	@echo Full list of permissions: https://vk.com/dev/permissions
 
 gorun:
-	go run go/cmd/main.go --vk_api_token $(VK_API_ACCESS_TOKEN)
+	@go run go/cmd/main.go --vk_api_token $(VK_API_ACCESS_TOKEN)
+
+j:
+	jupyter-notebook
+
+py_get_pikabu:
+	@python3 python/pikabu_get.py
+
+py_vk:
+	@python3 python/vk.py --token $(VK_API_ACCESS_TOKEN)
